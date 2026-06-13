@@ -76,4 +76,4 @@ The indicator plots up to three structural lines directly on your chart:
 | `useFast` | **Show Fast Line** | bool | `true` | Toggles rendering of the rapid response line. |
 | `useSlow` | **Show Slow Line** | bool | `false` | Toggles rendering of the macro baseline. |
 | `fastColor` / `midColor` / `slowColor` | **Fast / Mid / Slow** | color | *Varies* | Aesthetic color palette configurations for plots. |
-| `fillTrans` | **Fill Transparency** | int | `95` | Opacity control for the dynamic cloud areas (0 = opaque, $100 = invisible). |
+| `fillTrans` | **Fill Transparency** | int | `95` | Opacity control for the dynamic cloud areas (0 = opaque, 100 = invisible). |
