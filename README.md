@@ -62,3 +62,18 @@ The indicator plots up to three structural lines directly on your chart:
 * Set to `2.0` for a **Full Octave Shift** (Slower, structural trend following).
 * Set to `1.26` for a tight **Third-Octave Shift** (Aggressive scalping/momentum trading).
 * Set to `1.618` for a **Golden Ratio Shift** (Highly organic spacing based on fractal market geometry).
+
+---
+
+## Parameters & Settings Reference
+
+| Parameter Name | UI Label | Type | Default | Description |
+| --- | --- | --- | --- | --- |
+| `src` | **Source** | source | `hl2` | The price series input evaluated by the system. |
+| `minPeriod` | **Min Period** | int | `8` | The absolute lowest cycle length (in bars) the estimator will look for. |
+| `maxPeriod` | **Max Period** | int | `48` | The absolute highest cycle length (in bars) the estimator will look for. |
+| `k` | **Phase Spacing (k)** | float | `1.41` | The harmonic ratio used to scale the Fast and Slow bands relative to the dominant cycle. |
+| `useFast` | **Show Fast Line** | bool | `true` | Toggles rendering of the rapid response line. |
+| `useSlow` | **Show Slow Line** | bool | `false` | Toggles rendering of the macro baseline. |
+| `fastColor` / `midColor` / `slowColor` | **Fast / Mid / Slow** | color | *Varies* | Aesthetic color palette configurations for plots. |
+| `fillTrans` | **Fill Transparency** | int | `95` | Opacity control for the dynamic cloud areas (0 = opaque, $100 = invisible). |
