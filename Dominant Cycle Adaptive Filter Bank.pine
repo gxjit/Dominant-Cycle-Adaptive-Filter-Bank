@@ -8,17 +8,17 @@ clamp(val, lo, hi) =>
     math.max(lo, math.min(hi, val))
 
 superSmoother(source, period) =>
-    float a0 = math.pi * math.sqrt(2.0) / period
-    float a1 = math.exp(-a0)
-    float c2 = 2.0 * a1 * math.cos(a0)
-    float c3 = -a1 * a1
-    float c1 = 1.0 - c2 - c3
-    float ss = source
+    a0 = math.pi * math.sqrt(2.0) / period
+    a1 = math.exp(-a0)
+    c2 = 2.0 * a1 * math.cos(a0)
+    c3 = -a1 * a1
+    c1 = 1.0 - c2 - c3
+    ss = source
     if bar_index >= 4
         ss := c1 * ((source + source[1]) * 0.5) +
               c2 * nz(ss[1]) +
               c3 * nz(ss[2])
-    ss
+        ss
 
 //@function Autocorrelation periodogram dominant cycle estimator
 //@doc https://github.com/mihakralj/pinescript/blob/main/indicators/cycles/eacp.md
